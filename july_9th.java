@@ -8,11 +8,11 @@ class Solution {
         for(int i=1;i<nums.length;i++)
         {
             while(i-pq.peek()[0]>k)
-                pq.poll();
-            int top[] = pq.peek();
-            max = nums[i]+top[1];
+                 pq.poll();
+            int a[] = pq.peek();
+            max = nums[i]+a[1];
             pq.offer(new int[]{i,max});
         }
         return max;
     }
-}
+} 
